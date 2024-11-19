@@ -38,10 +38,12 @@ class ToolServiceProvider extends ServiceProvider
             return;
         }
 
-        Nova::router(['nova', Authenticate::class, Authorize::class], 'laravel-nova-edexml-import')
+        Nova::router(['nova', Authenticate::class, Authorize::class], 'edexml-import')
+//            ->namespace(__NAMESPACE__.'\\Http\\Controllers')
             ->group(__DIR__.'/../routes/inertia.php');
 
         Route::middleware(['nova', Authorize::class])
+//            ->namespace(__NAMESPACE__.'\\Http\\Controllers')
             ->prefix('nova-vendor/laravel-nova-edexml-import')
             ->group(__DIR__.'/../routes/api.php');
     }

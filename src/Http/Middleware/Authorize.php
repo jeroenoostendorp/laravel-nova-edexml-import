@@ -15,7 +15,7 @@ class Authorize
      * Handle the incoming request.
      * @param Closure(Request):mixed $next
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next)
     {
         $tool = collect(Nova::registeredTools())->first([$this, 'matchesTool']);
 
