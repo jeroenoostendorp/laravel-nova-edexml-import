@@ -1,0 +1,46 @@
+{
+  "name": "jeroenoostendorp/laravel-nova-edexml-import",
+  "description": "A Laravel Nova tool to import EDEXML.",
+  "keywords": [
+    "laravel",
+    "nova",
+    "EDEXML"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": "^8.0",
+    "laravel/nova": "^4.0"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "JeroenOostendorp\\LaravelNovaEdexmlImport\\": "src/"
+    }
+  },
+  "scripts": {
+    "lint": "@pint",
+    "lint:test": "@pint --test",
+    "lint:dirty": "@pint --dirty",
+    "pint": "vendor/bin/pint"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "JeroenOostendorp\\LaravelNovaEdexmlImport\\ToolServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://nova.laravel.com"
+    }
+  ]
+}
