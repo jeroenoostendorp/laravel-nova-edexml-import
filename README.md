@@ -1,3 +1,3 @@
 # Laravel Nova EDEXML Import
 
-Under development
+Under development - 19 nov 2024
